@@ -6,6 +6,7 @@ import helmet from 'helmet';
 import { errorHandler } from './middlewares/errorHandler';
 import healthRoutes from './routes/healthRoutes';
 import authRoutes from './routes/authRoutes';
+import vehicleRoutes from './routes/vehicleRoutes';
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use(authRoutes);
+app.use(vehicleRoutes);
 app.use(healthRoutes);
 
 app.use((err: unknown, _req: Request, res: Response, _next: NextFunction) => {
