@@ -8,6 +8,7 @@ import healthRoutes from './routes/healthRoutes';
 import authRoutes from './routes/authRoutes';
 import customerRoutes from './routes/customerRoutes';
 import vehicleRoutes from './routes/vehicleRoutes';
+import saleRoutes from './routes/saleRoutes';
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use(authRoutes);
 app.use(customerRoutes);
 app.use(vehicleRoutes);
+app.use(saleRoutes);
 app.use(healthRoutes);
 
 app.use((err: unknown, _req: Request, res: Response, _next: NextFunction) => {
