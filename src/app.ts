@@ -9,6 +9,7 @@ import authRoutes from './routes/authRoutes';
 import customerRoutes from './routes/customerRoutes';
 import vehicleRoutes from './routes/vehicleRoutes';
 import saleRoutes from './routes/saleRoutes';
+import docsRoutes from './routes/docsRoutes';
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.use(customerRoutes);
 app.use(vehicleRoutes);
 app.use(saleRoutes);
 app.use(healthRoutes);
+app.use(docsRoutes);
 
 app.use((err: unknown, _req: Request, res: Response, _next: NextFunction) => {
   errorHandler(err, res);
